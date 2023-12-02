@@ -55,4 +55,18 @@ func somaUltimosDigitos(ptr *int) {
     *ptr = soma
 }
 
-5.
+5.Escreva uma função em Go que receba um ponteiro para uma variável float64 e atualize
+o valor da variável para a média aritmética entre o seu valor atual e o valor da constante Pi.
+
+package main
+import (
+	"fmt"
+	"math"
+)
+func atualizaMediaComPi(ptr *float64) {
+	valorAtual := *ptr
+	media := (valorAtual + math.Pi) / 2
+	*ptr = media
+}
+
+6.
