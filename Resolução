@@ -27,3 +27,15 @@ func verificaParImpar(ptr *int) {
         *ptr = 1
     }
 }
+
+3.Escreva uma função em Go que receba um ponteiro para uma string e atualize o valor da string para seu reverso.
+
+package main
+import "fmt"
+func inverteString(ptr *string) {
+    bytes := []byte(*ptr)
+    for i, j := 0, len(bytes)-1; i < j; i, j = i+1, j-1 {
+        bytes[i], bytes[j] = bytes[j], bytes[i]
+    }
+    *ptr = string(bytes)
+}
